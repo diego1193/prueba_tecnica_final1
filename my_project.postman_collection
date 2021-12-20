@@ -1,0 +1,854 @@
+{
+	"info": {
+		"_postman_id": "55228791-95d8-48db-b196-637229a7f881",
+		"name": "project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario propietario",
+			"item": [
+				{
+					"name": "Registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula_propietario\": 23456,\r\n    \"nombre_propietario\": \"Wilfredo Vargas\",\r\n    \"email_propietario\": \"usuarioempresa02@gmail.com\",\r\n    \"usuario_propietario\": \"wilfredo123\",\r\n    \"password\": \"12345\",\r\n    \"telefono_propietario\": \"+57 3502233456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/registerPropietario",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"registerPropietario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"usuarioempresa02@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/loginPropietario",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"loginPropietario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Visualizar Individual",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/readPropietario",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"readPropietario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula_propietario\": 2278,\r\n    \"nombre_propietario\": \"Wilfredo\",\r\n    \"email_propietario\": \"usuarioempresa02@gmail.com\",\r\n    \"usuario_propietario\": \"Wilfredo\",\r\n    \"password\": \"12345\",\r\n    \"telefono_propietario\": \"+57 3502233456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/uploadPropietario",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"uploadPropietario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Visualizar All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/readPropietarioAll",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"readPropietarioAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/logoutPropietario",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"logoutPropietario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/eliminarProietario",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"eliminarProietario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresa Propietario",
+			"item": [
+				{
+					"name": "Registrar empres",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nit_p\": 1212,\r\n    \"nombre_empresa_p\": \"Mufu\",\r\n    \"nombre_comercial_p\": \"Mufu SAS\",\r\n    \"telefono_p\": \"+57 3445566\",\r\n    \"direccion_p\": \"calle 152b # 72\",\r\n    \"user_admin_p\": \"Wilfredo Vargas\",\r\n    \"email_p\": \"usuarioempresa02@gmail.com\",\r\n    \"web_p\": \"http://www.mufu.com\",\r\n    \"pais_p\": \"Colombia\",\r\n    \"estado_p\": \"Cundinamarca\",\r\n    \"ciudad_p\": \"Bogota DC\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/registerEmpresa",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"registerEmpresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver empresas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/readAllEmpresa",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"readAllEmpresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver empresas individual",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/readIndEmpresa/1212",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"readIndEmpresa",
+								"1212"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar empresa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/deleteEmpresa/1212",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"deleteEmpresa",
+								"1212"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar empresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nit_p\": 1212,\r\n    \"nombre_empresa_p\": \"Mufu\",\r\n    \"nombre_comercial_p\": \"Mufu SAS\",\r\n    \"telefono_p\": \"+57 388888886\",\r\n    \"direccion_p\": \"calle 152b # 72\",\r\n    \"user_admin_p\": \"Wilfredo Vargas\",\r\n    \"email_p\": \"usuarioempresa02@gmail.com\",\r\n    \"web_p\": \"http://www.mufu.com\",\r\n    \"pais_p\": \"Colombia\",\r\n    \"estado_p\": \"Cundinamarca\",\r\n    \"ciudad_p\": \"Bogota DC\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/uploadEmpresa",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"uploadEmpresa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresa cliente",
+			"item": [
+				{
+					"name": "Registrar Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nit_c\": 4567,\r\n    \"nombre_empresa_c\": \"bolsas\",\r\n    \"nombre_comercial_c\": \"bolsas S.A.S\",\r\n    \"telefono_c\": \"+57 3445566\",\r\n    \"direccion_c\": \"calle 73B # 72-91\",\r\n    \"user_admin_c\": \"Stiven Mora\",\r\n    \"email_c\": \"bolsas@gmail.com\",\r\n    \"web_c\": \"http://www.bolsas.com\",\r\n    \"pais_c\": \"Colombia\",\r\n    \"estado_c\": \"Cundinamarca\",\r\n    \"ciudad_c\": \"Bogota DC\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/registerCliente",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"registerCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/readAllCliente",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"readAllCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver individual cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/readIndCliente/4567",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"readIndCliente",
+								"4567"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nit_c\": 4567,\r\n    \"nombre_empresa_c\": \"bolsas\",\r\n    \"nombre_comercial_c\": \"bolsas A\",\r\n    \"telefono_c\": \"+57 3445566\",\r\n    \"direccion_c\": \"calle 73B # 72-91\",\r\n    \"user_admin_c\": \"Stiven Mora\",\r\n    \"email_c\": \"bolsas@gmail.com\",\r\n    \"web_c\": \"http://www.bolsas.com\",\r\n    \"pais_c\": \"Colombia\",\r\n    \"estado_c\": \"Cundinamarca\",\r\n    \"ciudad_c\": \"Bogota DC\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/uploadCliente",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"uploadCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/deleteCliente/4567",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"deleteCliente",
+								"4567"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "punto acceso",
+			"item": [
+				{
+					"name": "Registrar punto acceso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_empresa\": \"Mufu\",\r\n    \"direccion\": \"calle 152b # 92\",\r\n    \"ciudad\": \"Bogota\",\r\n    \"email\": \"usuarioempresa02@gmail.com\",\r\n    \"estado\": \"Activo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/registerPuntoAccceso",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"registerPuntoAccceso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View all  Acceso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/readAllPuntoAcceso",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"readAllPuntoAcceso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View punto acceso individual",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/readPuntoAcessoInd/Mufu",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"readPuntoAcessoInd",
+								"Mufu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Punto de acceso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_empresa\": \"Mufu\",\r\n    \"direccion\": \"calle 152b # 99\",\r\n    \"ciudad\": \"Bogota\",\r\n    \"email\": \"usuarioempresa02@gmail.com\",\r\n    \"estado\": \"Activo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/updatePuntoAcceso",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"updatePuntoAcceso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Punto de acceso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_empresa\": \"Mufu\",\r\n    \"direccion\": \"calle 152b # 99\",\r\n    \"ciudad\": \"Bogota\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/deletePuntoAccesoView",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"deletePuntoAccesoView"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario Empleado",
+			"item": [
+				{
+					"name": "Registrar empleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula_empleado\": 11931085,\r\n    \"nombre_empleado\": \"Diego Cabrera\",\r\n    \"email_empleado\": \"dueno.empresa123@gmail.com\",\r\n    \"usuario_empleado\": \"diego13\",\r\n    \"password\": \"12345\",\r\n    \"telefono_empleado\": \"+57 3502233456\",\r\n    \"empresa\": \"Mufu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/registerEmpleado",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"registerEmpleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send email validacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"dueno.empresa123@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/sendEmailValidacionEmpleado",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"sendEmailValidacionEmpleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validacion empleado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/validacionEmpleado/diego13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"validacionEmpleado",
+								"diego13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login empleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email_empleado\": \"dueno.empresa123@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/loginEmpleado",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"loginEmpleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Empleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula_empleado\": 1193108557,\r\n    \"nombre_empleado\": \"Diego Pineda\",\r\n    \"email_empleado\": \"diegocabrera1193@gmail.com\",\r\n    \"usuario_empleado\": \"diego13\",\r\n    \"password\": \"12345\",\r\n    \"telefono_empleado\": \"+57 3502233456\",\r\n    \"empresa\": \"Hewtech\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/uploadEmpleado",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"uploadEmpleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/deleteEmpleado/1193108557",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"deleteEmpleado",
+								"1193108557"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
